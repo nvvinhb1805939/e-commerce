@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/*========================Typhography========================*/
+
+$primary-font: 'Poppins', sans-serif;
+$second-font: 'Kalam', cursive;
+
+$primary-color: #40aa41;
+$second-color: #007bff;
+$text-color: #212529;
+$inner-text-color: white;
+$inner-text-hover-color: yellow;
+$selection-bg-color: #ffc107;
+$footer-bg-color: #eee;
+$boder-color: rgba(0, 0, 0, 0.25);
+
+$smallest-font-size: 1rem;
+$small-font-size: 1.4rem;
+$regular-font-size: 1.6rem;
+$large-font-size: 2rem;
+$larger-font-size: 2.4rem;
+$largest-font-size: 3.2rem;
+$huge-font-size: 4rem;
+
+$small-spacing: 0.025em;
+$regular-spacing: 0.035em;
+$large-spacing: 0.1em;
+
+/*========================Margin &  Padding========================*/
+
+$small-gap: 15px;
+$regular-gap: 24px;
+$medium-gap: 30px;
+$large-gap: 110px;
+
+/*========================Shadow========================*/
+$small-spread: 2px;
+$large-spread: 35px;
+
+/*========================Radius========================*/
+$small-radius: 4px;
+/*========================Blur========================*/
+$blur: 5px;

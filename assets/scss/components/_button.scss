@@ -1,0 +1,97 @@
+@use '../abstracts/placeholderSelectors';
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixs;
+
+.btn {
+  position: relative;
+  z-index: 1;
+
+  color: vars.$inner-text-color;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: capitalize;
+
+  background: none;
+  border-radius: vars.$small-radius;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+
+  &--large {
+    @include mixs.set-height(48px);
+  }
+
+  &--medium {
+    @include mixs.set-height(40px);
+  }
+
+  &--small {
+    @include mixs.set-height(32px);
+  }
+
+  &--primary::before,
+  &--cancel::before,
+  &--error::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    border-radius: inherit;
+  }
+
+  &--primary {
+    &::before {
+      @include mixs.set-inset-shadow(vars.$large-spread, vars.$primary-color);
+    }
+
+    &:hover,
+    &:hover > i {
+      color: vars.$primary-color;
+    }
+
+    &:hover::before {
+      @include mixs.set-inset-shadow(vars.$small-spread, vars.$primary-color);
+    }
+  }
+
+  &--cancel {
+    &::before {
+      @include mixs.set-inset-shadow(vars.$large-spread, vars.$second-color);
+    }
+
+    &:hover,
+    &:hover > i {
+      color: vars.$second-color;
+    }
+
+    &:hover::before {
+      @include mixs.set-inset-shadow(vars.$small-spread, vars.$second-color);
+    }
+  }
+
+  &--error {
+    &::before {
+      @include mixs.set-inset-shadow(vars.$large-spread, vars.$selection-bg-color);
+    }
+
+    &:hover,
+    &:hover > i {
+      color: vars.$selection-bg-color;
+    }
+
+    &:hover::before {
+      @include mixs.set-inset-shadow(vars.$small-spread, vars.$selection-bg-color);
+    }
+  }
+
+  &--second {
+    color: vars.$text-color;
+  }
+
+  &--round {
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+}

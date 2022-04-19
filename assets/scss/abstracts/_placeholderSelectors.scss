@@ -1,0 +1,20 @@
+@use './variables' as vars;
+
+%darkgreen-white {
+  background-color: vars.$primary-color;
+  color: vars.$inner-text-color;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%border-bottom {
+  border-bottom: 1px solid vars.$boder-color;
+}
+
+%mb-regular {
+  margin-bottom: vars.$regular-gap;
+}

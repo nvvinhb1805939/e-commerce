@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin tức | Nông Nghiệp Xanh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <nav class="header__nav header__nav--primary">
+            <a href="" class="link link--regular header__nav-link">Kênh người bán</a>
+            <span> | </span>
+            <a href="" class="link link--regular header__nav-link">Trở thành người bán</a>
+          </nav>
+          <!-- if login success => push class 'logged-in' to 'header__control'  -->
+          <div class="header__control logged-in">
+            <div class="header__auth">
+              <a href="../Authencation/signup.html" class="link link--regular">Đăng ký</a>
+              <span> | </span>
+              <a href="../Authencation/login.html" class="link link--regular">Đăng nhập</a>
+            </div>
+            <div class="header__profile">
+              <div class="header__avt">
+                <button class="avatar btn">
+                  <img src="./assets/images/img_avatar.png" alt="avt" />
+                </button>
+              </div>
+              <ul class="header__list">
+                <li class="header__item">
+                  <a href="./info.html" class="header__link"><i class="fas fa-user"></i>Thông tin cá nhân</a>
+                </li>
+                <li class="header__item">
+                  <a href="./post.html" class="header__link"><i class="fas fa-receipt"></i>Đơn mua</a>
+                </li>
+                <li class="header__item">
+                  <a href="#" class="header__link"><i class="fas fa-power-off"></i>Đăng xuất</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__logo logo logo--small">
+            <a href="#">
+              <img src="./assets/images/logo.png" alt="logo" class="header__img" />
+              <span>Nông Nghiệp Xanh</span>
+            </a>
+          </div>
+          <div class="header__search">
+            <form class="header__form">
+              <input class="header__input" type="text" />
+              <button class="header__btn btn btn--small btn--primary"><i class="fas fa-search"></i></button>
+            </form>
+            <nav class="header__nav">
+              <a href="" class="link link--regular header__nav-link">Link</a>
+              <a href="" class="link link--regular header__nav-link">Link</a>
+              <a href="" class="link link--regular header__nav-link">Link</a>
+              <a href="" class="link link--regular header__nav-link">Link</a>
+              <a href="" class="link link--regular header__nav-link">Link</a>
+            </nav>
+          </div>
+          <div class="header__cart">
+            <button class="btn header__cart-btn">
+              <i class="fas fa-shopping-cart icon"></i> <span class="header__cart-quantity">0</span>
+            </button>
+            <!-- by default, there is no item in cart -->
+            <div class="header__cart-wrapper header__cart-wrapper--empty">
+              <i class="fas fa-shopping-cart header__cart-icon"></i>
+              <p class="header__cart-msg">Chưa có sản phẩm trong giỏ hàng</p>
+            </div>
+
+            <!-- if there is one item in cart at least -->
+            <!-- <div class="header__cart-wrapper header__cart-wrapper--fill show">
+              <span class="header__cart-heading">Danh sách sản phẩm</span>
+              <ul class="header__cart-list">
+                <li class="header__cart-item">
+                  <img
+                    class="header__cart-img"
+                    src="./assets/images/product.png"
+                    alt="item"
+                    class="header__cart-thumb"
+                  />
+                  <div class="header__cart-content">
+                    <span class="header__cart-title">Áo thun nam Áo thun nam Áo thun nam Áo thun nam</span>
+                    <span class="header__cart-price">49.000đ</span>
+                  </div>
+                </li>
+                <li class="header__cart-item">
+                  <img
+                    class="header__cart-img"
+                    src="./assets/images/product.png"
+                    alt="item"
+                    class="header__cart-thumb"
+                  />
+                  <div class="header__cart-content">
+                    <span class="header__cart-title">Áo thun nam Áo thun nam Áo thun nam Áo thun nam</span>
+                    <span class="header__cart-price">49.000đ</span>
+                  </div>
+                </li>
+                <li class="header__cart-item">
+                  <img
+                    class="header__cart-img"
+                    src="./assets/images/product.png"
+                    alt="item"
+                    class="header__cart-thumb"
+                  />
+                  <div class="header__cart-content">
+                    <span class="header__cart-title">Áo thun nam Áo thun nam Áo thun nam Áo thun nam</span>
+                    <span class="header__cart-price">49.000đ</span>
+                  </div>
+                </li>
+                <li class="header__cart-item">
+                  <img
+                    class="header__cart-img"
+                    src="./assets/images/product.png"
+                    alt="item"
+                    class="header__cart-thumb"
+                  />
+                  <div class="header__cart-content">
+                    <span class="header__cart-title">Áo thun nam Áo thun nam Áo thun nam Áo thun nam</span>
+                    <span class="header__cart-price">49.000đ</span>
+                  </div>
+                </li>
+                <li class="header__cart-item">
+                  <img
+                    class="header__cart-img"
+                    src="./assets/images/product.png"
+                    alt="item"
+                    class="header__cart-thumb"
+                  />
+                  <div class="header__cart-content">
+                    <span class="header__cart-title">Áo thun nam Áo thun nam Áo thun nam Áo thun nam</span>
+                    <span class="header__cart-price">49.000đ</span>
+                  </div>
+                </li>
+                <li class="header__cart-item">
+                  <img
+                    class="header__cart-img"
+                    src="./assets/images/product.png"
+                    alt="item"
+                    class="header__cart-thumb"
+                  />
+                  <div class="header__cart-content">
+                    <span class="header__cart-title">Áo thun nam Áo thun nam Áo thun nam Áo thun nam</span>
+                    <span class="header__cart-price">49.000đ</span>
+                  </div>
+                </li>
+              </ul>
+              <button class="btn btn--medium btn--primary">Xem giỏ hàng</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <h4 class="section__heading">Danh mục</h4>
+        <ul class="section__list">
+          <li class="section__item">
+            <a href="" class="section__link">
+              <img src="./assets/images/product_1.png" alt="img" class="section__img" />
+              <p class="section__title">Quần áo</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo logo logo--second logo--regular">
+          <a href="#">
+            <img src="./assets/images/logo.png" alt="logo" class="header__img" />
+            <span>Nông Nghiệp Xanh</span>
+          </a>
+        </div>
+        <div class="footer__contact">
+          <ul class="footer__list">
+            <li class="footer__item">Địa chỉ: Đại học Cần Thơ Khu II, 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ</li>
+            <li class="footer__item">
+              Email: <a href="mailto:nongnghiepxanh@gmail.com" class="link">nongnghiepxanh@gmail.com</a>
+            </li>
+            <li class="footer__item">Hotline: <a href="tel:0123456789" class="link">0123456789</a></li>
+          </ul>
+        </div>
+        <div class="footer__copyright">
+          <p>© Nông Nghiệp Xanh - Nền tảng thương mại điện tử dành cho thị trường nông nghiệp Việt Nam</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/toggleList.js"></script>
+    <script src="./assets/js/toggleCartList.js"></script>
+  </body>
+</html>

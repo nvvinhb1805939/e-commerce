@@ -1,0 +1,129 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/placeholderSelectors';
+
+.article-list {
+  padding-block: vars.$medium-gap;
+}
+
+.article {
+  $regular-gap: calc(vars.$regular-gap / 2);
+  $small-gap: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  &--big,
+  &--medium,
+  &--small {
+    flex-direction: row;
+    height: fit-content;
+  }
+
+  &--big {
+    background-color: vars.$footer-bg-color;
+  }
+
+  &--big &__link {
+    flex-basis: 66.67%;
+  }
+
+  &--big &__info {
+    padding-inline: vars.$regular-gap;
+  }
+
+  &--big &__heading {
+    font-size: vars.$larger-font-size;
+  }
+
+  &--medium {
+    @extend %border-bottom;
+    padding-bottom: vars.$small-gap;
+
+    & ~ & {
+      margin-top: vars.$small-gap;
+    }
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+
+  &--medium &__link {
+    flex-basis: 33.33%;
+  }
+
+  &--medium &__info {
+    padding-inline: vars.$small-gap;
+  }
+
+  &--medium &__heading,
+  &--small &__heading {
+    margin-top: 0;
+  }
+
+  &--small {
+    flex-direction: row-reverse;
+    column-gap: vars.$small-gap;
+    padding-bottom: vars.$small-gap;
+    margin-bottom: vars.$small-gap;
+  }
+
+  &--small &__link {
+    flex-basis: 25%;
+  }
+
+  &--admin {
+    position: relative;
+  }
+
+  &--admin:hover &__modal {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__modal {
+    @extend %flex-center;
+    column-gap: vars.$small-gap;
+
+    position: absolute;
+    inset: 0 0 vars.$small-gap 0;
+    background-color: vars.$footer-bg-color;
+
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__link {
+    flex-shrink: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__heading {
+    margin-top: $regular-gap;
+
+    &--small {
+      font-size: vars.$regular-font-size;
+    }
+  }
+
+  &__heading &__link:hover {
+    color: vars.$primary-color;
+  }
+
+  &__category &__link {
+    margin-block: $small-gap;
+    color: vars.$second-color;
+  }
+
+  &__info {
+    padding-bottom: $small-gap;
+  }
+
+  &__intro {
+    margin-bottom: $regular-gap;
+  }
+}

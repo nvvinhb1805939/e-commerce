@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as vars;
+
+.link {
+  position: relative;
+  color: inherit;
+  cursor: pointer;
+
+  &--primary {
+    color: vars.$primary-color;
+  }
+
+  &--second {
+    color: vars.$second-color;
+  }
+
+  &.active,
+  &--regular:hover {
+    color: vars.$inner-text-hover-color;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+
+    background-color: currentColor;
+  }
+
+  &--bold {
+    font-weight: 600;
+
+    &::after {
+      height: 2px;
+    }
+  }
+
+  &.active::after,
+  &:hover::after {
+    width: 100%;
+    color: currentColor;
+  }
+
+  &__icon {
+    font-size: vars.$larger-font-size;
+  }
+}
