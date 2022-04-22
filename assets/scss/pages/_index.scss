@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as vars;
 
 main {
-  padding-block: vars.$regular-gap;
+  padding-block: vars.$regular-gap vars.$large-gap;
   background-color: vars.$footer-bg-color;
+  border-bottom: 4px solid vars.$primary-color;
 }
