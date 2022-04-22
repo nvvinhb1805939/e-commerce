@@ -1,9 +1,46 @@
 @use '../abstracts/variables' as vars;
 
 .section {
+  background-color: vars.$inner-text-color;
+  border-radius: vars.$small-radius;
+
+  &:not(:first-of-type) {
+    margin-top: vars.$regular-gap;
+  }
+
+  &__heading {
+    padding: vars.$small-gap vars.$regular-gap;
+
+    font-size: vars.$regular-font-size;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: vars.$regular-spacing;
+    color: vars.$primary-color;
+  }
+
+  &__item {
+    border-width: 1px;
+    border-style: solid;
+    border-color: vars.$boder-color vars.$boder-color vars.$boder-color transparent;
+
+    &:nth-of-type(n + 11) {
+      border-top: 0;
+    }
+
+    &:nth-of-type(10n + 1) {
+      border-left-color: vars.$boder-color;
+    }
+  }
+
   &__link {
+    padding: vars.$regular-gap;
     text-align: center;
   }
+
+  &__link:hover &__title {
+    color: vars.$primary-color;
+  }
+
   &__img {
     width: 80px;
   }

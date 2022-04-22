@@ -19,6 +19,10 @@
     grid-gap: 0;
   }
 
+  &--10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
   &--12 {
     grid-template-columns: repeat(12, 1fr);
   }

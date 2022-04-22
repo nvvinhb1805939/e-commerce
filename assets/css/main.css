@@ -171,8 +171,38 @@
   height: 100%;
 }
 
+.section {
+  background-color: white;
+  border-radius: 4px;
+}
+.section:not(:first-of-type) {
+  margin-top: 24px;
+}
+.section__heading {
+  padding: 15px 24px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.035em;
+  color: #40aa41;
+}
+.section__item {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) transparent;
+}
+.section__item:nth-of-type(n + 11) {
+  border-top: 0;
+}
+.section__item:nth-of-type(10n + 1) {
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
 .section__link {
+  padding: 24px;
   text-align: center;
+}
+.section__link:hover .section__title {
+  color: #40aa41;
 }
 .section__img {
   width: 80px;
@@ -298,6 +328,9 @@ h4 {
 }
 .grid--no-gap {
   grid-gap: 0;
+}
+.grid--10 {
+  grid-template-columns: repeat(10, 1fr);
 }
 .grid--12 {
   grid-template-columns: repeat(12, 1fr);
@@ -573,8 +606,14 @@ h4 {
   text-align: center;
 }
 
+main {
+  padding-block: 24px;
+  background-color: #eee;
+}
+
 /*==============Components==============*/
 /*==============Core==============*/
 /*==============Layouts==============*/
+/*==============Pages==============*/
 
 /*# sourceMappingURL=main.css.map */
