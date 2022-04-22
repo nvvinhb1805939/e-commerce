@@ -19,6 +19,14 @@
     grid-gap: 0;
   }
 
+  &--small-gap {
+    grid-gap: vars.$small-gap;
+  }
+
+  &--6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   &--10 {
     grid-template-columns: repeat(10, 1fr);
   }

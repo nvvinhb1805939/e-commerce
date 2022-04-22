@@ -8,9 +8,16 @@
     margin-top: vars.$regular-gap;
   }
 
-  &__heading {
-    padding: vars.$small-gap vars.$regular-gap;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    padding: vars.$small-gap vars.$regular-gap;
+    border-bottom: 1px solid vars.$boder-color;
+  }
+
+  &__heading {
     font-size: vars.$regular-font-size;
     font-weight: 400;
     text-transform: uppercase;
@@ -18,30 +25,90 @@
     color: vars.$primary-color;
   }
 
+  &__more {
+    font-size: vars.$regular-font-size;
+    text-transform: capitalize;
+  }
+
   &__item {
     border-width: 1px;
     border-style: solid;
-    border-color: vars.$boder-color vars.$boder-color vars.$boder-color transparent;
-
-    &:nth-of-type(n + 11) {
-      border-top: 0;
-    }
+    border-color: transparent vars.$boder-color vars.$boder-color transparent;
 
     &:nth-of-type(10n + 1) {
       border-left-color: vars.$boder-color;
+    }
+
+    &--primary {
+      border: 0;
     }
   }
 
   &__link {
     padding: vars.$regular-gap;
     text-align: center;
+
+    &--primary {
+      padding: vars.$small-gap 8px;
+    }
   }
 
   &__link:hover &__title {
     color: vars.$primary-color;
   }
 
+  &__title {
+    &--large {
+      margin-top: vars.$small-gap;
+      font-size: vars.$large-font-size;
+      line-height: 1.2;
+    }
+  }
+
   &__img {
-    width: 80px;
+    position: relative;
+
+    &::after {
+      content: ' ' attr(data-sale) ' ';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      color: white;
+      background-color: vars.$boder-color;
+    }
+  }
+
+  &__label {
+    $size: 32px;
+    $border-top-width: calc($size / 4);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: $size;
+    height: $size;
+
+    font-size: vars.$smallest-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: calc($size + $border-top-width);
+
+    color: vars.$inner-text-color;
+    background-color: vars.$primary-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      border-style: solid;
+      border-width: $border-top-width calc($size / 2) 0 calc($size / 2);
+      border-color: vars.$primary-color transparent;
+    }
   }
 }
